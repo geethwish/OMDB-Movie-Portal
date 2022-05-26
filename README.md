@@ -1,2 +1,5 @@
-# ODM-Movie-Portal
-This is a Movie portal design with react base on IMDb API.
+#OMDB Movies Portal
+
+### `npm install`
+
+### `npm start`
