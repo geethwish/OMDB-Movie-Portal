@@ -1,0 +1,39 @@
+@use "../../assets/styles/variables.scss" as *;
+.inputFieldWrapper {
+  padding: 0px 5px;
+}
+
+.input {
+  border: none;
+  border-bottom: 2px solid $light2;
+}
+
+.input:active {
+  border: none;
+  border-bottom: 2px solid $light2;
+}
+
+.input:focus {
+  border: none;
+  border-bottom: 2px solid $light2;
+}
+
+input[type="search" i] {
+  border: none;
+  border-bottom: 2px solid $light2;
+  padding: 1px 2px;
+  outline: none;
+  font-weight: 600;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .inputFieldWrapper {
+    height: 28px;
+  }
+
+  input[type="search" i] {
+    background-color: $light2;
+    height: 100%;
+  }
+}

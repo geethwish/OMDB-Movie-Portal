@@ -1,10 +1,10 @@
 .container {
-  width: 100%;
   padding: 0 20%;
 }
 
+// handle the container with in the low width devices
 @media (max-width: 768px) {
   .container {
-    padding: 0;
+    padding: 20px;
   }
 }

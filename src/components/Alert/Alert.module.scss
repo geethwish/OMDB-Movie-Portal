@@ -1,0 +1,32 @@
+@use "../../assets/styles/variables.scss" as *;
+
+.alert {
+  padding: 30px;
+  font-weight: 600;
+}
+
+// alert message theme
+.info {
+  color: $secondary;
+  background-color: $info;
+  border: 1px dashed $info;
+}
+
+.error {
+  color: $error;
+  background-color: $lightError;
+  border: 1px dashed $error;
+}
+
+// alert message text alignment
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}

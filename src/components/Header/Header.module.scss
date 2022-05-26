@@ -1,7 +1,72 @@
 @use "../../assets/styles/variables.scss" as *;
 .headerContainer {
-  height: 25px;
+  height: 30px;
   background-color: $light;
   box-shadow: -2px 5px 8px 0px $light2;
-  padding: 20px;
+  padding: 20px 0px;
+}
+
+.title {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $secondary;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitleWrapper {
+  width: 100%;
+}
+.headerSearchWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.searchTest {
+  margin-right: 5px;
+  font-weight: 600;
+  color: $secondary;
+  font-size: 1rem;
+}
+
+// handle the container with in the low width devices
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1rem;
+  }
+  .headerContent {
+    display: flex;
+    align-items: center;
+  }
+
+  .headerContainer {
+    padding: 10px 0px;
+    height: 100%;
+  }
+  .searchTest {
+    display: none;
+  }
+
+  .headerTitleWrapper {
+    width: 35%;
+  }
+  .headerSearchWrapper {
+    width: 65%;
+  }
+}
+
+// tab + sizes responsiveness
+
+@media (min-width: 1025px) and(max-width: 1280px) {
+  .searchTest {
+    width: 100%;
+  }
 }
