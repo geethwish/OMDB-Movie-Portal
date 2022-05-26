@@ -1,0 +1,7 @@
+@use "../../assets/styles/variables.scss" as *;
+.headerContainer {
+  height: 25px;
+  background-color: $light;
+  box-shadow: -2px 5px 8px 0px $light2;
+  padding: 20px;
+}
