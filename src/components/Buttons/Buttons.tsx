@@ -25,7 +25,8 @@ const Buttons = (props: ButtonsProps) => {
             className={classNames(
                 styles.button,
                 className ? className : '',
-                variant ? styles[variant] : ''
+                variant ? styles[variant] : '',
+                disabled ? styles.disabled : ''
             )}
             onClick={onClick}
             disabled={disabled}
@@ -39,9 +40,10 @@ type ButtonsProps = {
     label: string,
     id?: string,
     className?: string | string[],
-    onClick?: () => void,
+    onClick?: React.MouseEventHandler<HTMLButtonElement>,
     disabled?: boolean,
     style?: React.CSSProperties,
     variant?: string,
 };
+
 export default Buttons

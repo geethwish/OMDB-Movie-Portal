@@ -1,4 +1,6 @@
 @use "../../assets/styles/variables.scss" as *;
+
+// basic button styles
 .button {
   margin-left: 10px;
   border: none;
@@ -13,10 +15,17 @@
   cursor: pointer;
 }
 
+// styles for disabled button
+.disabled {
+  color: $light3 !important;
+}
+
+// default button style
 .default {
   background-color: $light3;
 }
 
+// link type button style
 .link {
   background-color: transparent !important;
   color: $secondary;

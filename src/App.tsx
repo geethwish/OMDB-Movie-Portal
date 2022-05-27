@@ -6,6 +6,7 @@ import Home from './pages/Home';
 
 // components
 import Header from './components/Header/Header';
+import PageNotFound from './pages/404/PageNotFound';
 
 function App() {
     return (
@@ -16,6 +17,8 @@ function App() {
             <Routes>
 
                 <Route path="/" element={<Home />} />
+
+                <Route path="*" element={<PageNotFound />} />
 
             </Routes>
 

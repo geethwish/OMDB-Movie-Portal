@@ -1,5 +1,6 @@
 @use "./assets/styles/variables.scss" as *;
 
+// set basic font configurations
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,12 +16,16 @@ code {
     monospace;
 }
 
+// rem configurations
+// we'll use the rem scale in this project. following configuration will set to 1rem = 10px
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.4rem;
 }
+
+// basic tag styles
 h1 {
   font-size: 2.4rem;
 }
@@ -33,7 +38,7 @@ h6 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 0;
   color: $secondary;

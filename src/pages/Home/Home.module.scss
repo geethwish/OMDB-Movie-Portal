@@ -4,7 +4,14 @@
 }
 .moviesContainer {
   width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem;
+}
+
+@media (max-width: 540px) {
+  // set all the movie cards to full width on mobile devices
+  .moviesContainer {
+    grid-template-columns: 100%;
+  }
 }

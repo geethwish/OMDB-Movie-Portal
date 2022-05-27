@@ -1,25 +1,37 @@
 @use "../../assets/styles/variables.scss" as *;
+
 .cardWrapper {
-  flex: 0 0 calc(50% - 1rem);
-  min-height: 26rem;
-  margin-top: 2rem;
+  min-height: 20rem;
   display: flex;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 2px;
 }
 
+// full width card handling
 .fullWidth {
-  flex: 0 0 calc(100%);
+  grid-column: 1 / span 2;
+  height: 100%;
+  .descriptionSection {
+    width: 100%;
+  }
+  .posterSection {
+    max-width: 16rem;
+  }
+  .cardContent {
+    margin-bottom: 5rem;
+  }
 }
 
 .posterSection {
-  min-width: 35%;
+  min-width: 16rem;
   background-color: $info;
+  max-height: 22rem;
+  object-fit: cover;
 }
 
 .descriptionSection {
   background-color: $light;
-  width: 65%;
+  width: 80%;
   position: relative;
 }
 
@@ -27,6 +39,10 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.cardContent {
+  padding: 1.2rem 1rem;
 }
 
 .separator {
@@ -40,19 +56,36 @@
   align-items: center;
 }
 
-.cardContent {
-  padding: 1.2rem 1rem;
+.title {
+  font-size: 1.4rem;
 }
-
 .subTitle {
   font-size: 1rem;
   color: $light3;
   font-weight: 500;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
+
+.year {
+  font-size: 1.4 rem;
+  font-weight: 600;
+  color: $light3;
+}
+
+// handle movie card responsiveness for mobile devices
 
 @media (max-width: 540px) {
   .cardWrapper {
-    flex-basis: calc(100%);
+    grid-column: 1 / span 2;
+    height: 100%;
+  }
+  .cardContent {
+    padding: 1.2rem 1rem;
+  }
+  .fullWidth {
+    .cardContent {
+      margin-bottom: 4rem;
+      height: 100%;
+    }
   }
 }

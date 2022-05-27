@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useAppDispatch } from '../../app/hooks'
+import { searchMovie } from '../../redux/movies/moviesSlice'
 
 // components
 import Buttons from '../Buttons/Buttons'
@@ -9,6 +11,18 @@ import InputSearch from '../InputFields/InputSearch'
 import styles from './Header.module.scss'
 
 const Header = () => {
+
+    const dispatch = useAppDispatch()
+
+    const [searchKey, setSearchKey] = useState("")
+
+    // handle movie search
+    const search = () => {
+
+        // search movies using entered key
+        dispatch(searchMovie({ key: searchKey }))
+
+    }
     return (
         <div className={styles.headerContainer}>
 
@@ -33,10 +47,12 @@ const Header = () => {
 
                         <InputSearch
                             name='searchMovie'
+                            onChange={(e) => setSearchKey(e.target.value)}
+                            value={searchKey}
 
                         />
 
-                        <Buttons label='Search' />
+                        <Buttons label='Search' onClick={search} />
 
                     </div>
 
