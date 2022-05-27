@@ -10,4 +10,14 @@
   font-weight: 700;
   letter-spacing: 1px;
   padding: 8px;
+  cursor: pointer;
+}
+
+.default {
+  background-color: $light3;
+}
+
+.link {
+  background-color: transparent !important;
+  color: $secondary;
 }

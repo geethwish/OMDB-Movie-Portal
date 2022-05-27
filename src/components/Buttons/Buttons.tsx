@@ -13,7 +13,8 @@ const Buttons = (props: ButtonsProps) => {
         className,
         style,
         disabled,
-        onClick
+        onClick,
+        variant
 
     } = props;
 
@@ -23,7 +24,8 @@ const Buttons = (props: ButtonsProps) => {
             style={style ? style : {}}
             className={classNames(
                 styles.button,
-                className ? className : ''
+                className ? className : '',
+                variant ? styles[variant] : ''
             )}
             onClick={onClick}
             disabled={disabled}
@@ -39,6 +41,7 @@ type ButtonsProps = {
     className?: string | string[],
     onClick?: () => void,
     disabled?: boolean,
-    style?: React.CSSProperties
+    style?: React.CSSProperties,
+    variant?: string,
 };
 export default Buttons

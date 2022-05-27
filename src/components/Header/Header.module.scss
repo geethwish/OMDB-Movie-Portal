@@ -9,7 +9,7 @@
 .title {
   margin: 0px;
   padding: 0px;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: $secondary;
 }
@@ -34,13 +34,13 @@
   margin-right: 5px;
   font-weight: 600;
   color: $secondary;
-  font-size: 1rem;
+  font-size: 1.8rem;
 }
 
 // handle the container with in the low width devices
 @media (max-width: 1024px) {
   .title {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
   .headerContent {
     display: flex;

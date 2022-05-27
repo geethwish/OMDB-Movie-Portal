@@ -5,6 +5,7 @@ import Alert from '../../components/Alert/Alert'
 // styles
 import styles from './Home.module.scss'
 import MovieCard from '../../components/MovieCard/MovieCard'
+import Pagination from '../../components/Pagination/Pagination'
 const Home = () => {
     return (
         <div className={styles.homeWrapper}>
@@ -20,9 +21,13 @@ const Home = () => {
                 <div className={styles.moviesContainer}>
 
                     <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
 
                 </div>
 
+                <Pagination />
             </Container>
 
         </div>

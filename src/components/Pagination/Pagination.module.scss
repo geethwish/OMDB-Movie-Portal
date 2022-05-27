@@ -1,0 +1,27 @@
+@use "../../assets/styles/variables.scss" as *;
+.container {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 20rem;
+  background-color: $light;
+  padding: 1rem 1rem;
+  justify-content: center;
+  border-radius: 2px;
+}
+.pages {
+  font-size: 1.8rem;
+  color: $light3;
+}
+
+@media (max-width: 540px) {
+  .wrapper {
+    max-width: 100%;
+    flex: 1;
+  }
+}
